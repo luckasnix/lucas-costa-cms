@@ -7,6 +7,12 @@ export default {
       name: 'title',
       title: 'Título',
       type: 'string'
+    },
+    {
+      name: 'description',
+      title: 'Descrição',
+      type: 'text',
+      rows: 2
     }
   ]
 }
