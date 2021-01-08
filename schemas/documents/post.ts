@@ -18,6 +18,11 @@ export default {
       name: 'date',
       title: 'Data',
       type: 'date'
+    },
+    {
+      name: 'coverImage',
+      title: 'Imagem de Capa',
+      type: 'image'
     }
   ]
 }
