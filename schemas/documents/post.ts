@@ -13,6 +13,11 @@ export default {
       title: 'Descrição',
       type: 'text',
       rows: 2
+    },
+    {
+      name: 'date',
+      title: 'Data',
+      type: 'date'
     }
   ]
 }
