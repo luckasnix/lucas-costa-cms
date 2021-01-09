@@ -4,6 +4,18 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'locale',
+      title: 'Localidade',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Português', value: 'pt-BR' },
+          { title: 'Inglês', value: 'en-US' },
+          { title: 'Espanhol', value: 'es-ES' }
+        ]
+      }
+    },
+    {
       name: 'title',
       title: 'Título',
       type: 'string'
