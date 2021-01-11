@@ -18,7 +18,11 @@ export default {
     {
       name: 'slug',
       title: 'Slug',
-      type: 'slug'
+      type: 'slug',
+      options: {
+        source: 'title',
+        slugify: (input: string) => input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')
+      }
     },
     {
       name: 'title',
