@@ -44,6 +44,14 @@ export default {
       name: 'coverImage',
       title: 'Imagem de Capa',
       type: 'image'
+    },
+    {
+      name: 'content',
+      title: 'Conteúdo',
+      type: 'array',
+      of: [
+        { type: 'block' }
+      ]
     }
   ]
 }
