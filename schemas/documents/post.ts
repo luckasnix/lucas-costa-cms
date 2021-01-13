@@ -51,7 +51,16 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'block'
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'Título 2', value: 'h2' },
+            { title: 'Título 3', value: 'h3' },
+            { title: 'Título 4', value: 'h4' },
+            { title: 'Título 5', value: 'h5' },
+            { title: 'Título 6', value: 'h6' },
+            { title: 'Citação', value: 'blockquote' }
+          ] 
         },
         {
           title: 'Imagem',
