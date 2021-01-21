@@ -75,6 +75,14 @@ export default {
               }
             }
           ]
+        },
+        {
+          name: 'code',
+          title: 'Código',
+          type: 'code',
+          options: {
+            withFilename: true
+          }
         }
       ]
     },
