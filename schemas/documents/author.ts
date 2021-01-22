@@ -6,12 +6,14 @@ export default {
     {
       name: 'name',
       title: 'Nome',
-      type: 'string'
+      type: 'string',
+      validation: (Rule: any) => Rule.required().error('O nome é obrigatório')
     },
     {
       name: 'avatar',
       title: 'Avatar',
-      type: 'image'
+      type: 'image',
+      validation: (Rule: any) => Rule.required().error('O avatar é obrigatório')
     }
   ]
 }

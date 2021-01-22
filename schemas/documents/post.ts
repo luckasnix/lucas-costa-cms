@@ -13,7 +13,8 @@ export default {
           { title: 'Inglês', value: 'en-US' },
           { title: 'Espanhol', value: 'es-ES' }
         ]
-      }
+      },
+      validation: (Rule: any) => Rule.required().error('A localidade é obrigatória')
     },
     {
       name: 'slug',
@@ -27,23 +28,27 @@ export default {
     {
       name: 'title',
       title: 'Título',
-      type: 'string'
+      type: 'string',
+      validation: (Rule: any) => Rule.required().error('O título é obrigatório')
     },
     {
       name: 'description',
       title: 'Descrição',
       type: 'text',
-      rows: 2
+      rows: 2,
+      validation: (Rule: any) => Rule.required().error('A descrição é obrigatória')
     },
     {
       name: 'date',
       title: 'Data',
-      type: 'date'
+      type: 'date',
+      validation: (Rule: any) => Rule.required().error('A data é obrigatória')
     },
     {
       name: 'coverImage',
       title: 'Imagem de Capa',
-      type: 'image'
+      type: 'image',
+      validation: (Rule: any) => Rule.required().error('A imagem de capa é obrigatória')
     },
     {
       name: 'content',
@@ -84,7 +89,8 @@ export default {
             withFilename: true
           }
         }
-      ]
+      ],
+      validation: (Rule: any) => Rule.required().error('O conteúdo é obrigatório')
     },
     {
       name: 'author',
@@ -94,7 +100,8 @@ export default {
         {
           type: 'author'
         }
-      ]
+      ],
+      validation: (Rule: any) => Rule.required().error('O autor é obrigatório')
     }
   ]
 }
