@@ -29,14 +29,21 @@ export default {
       name: 'title',
       title: 'Título',
       type: 'string',
-      validation: (Rule: any) => Rule.required().error('O título é obrigatório')
+      validation: (Rule: any) => [
+        Rule.required().error('O título é obrigatório'),
+        Rule.max(60).warning('O título ideal deve conter no máximo 60 caracteres')
+      ]
     },
     {
       name: 'description',
       title: 'Descrição',
       type: 'text',
       rows: 2,
-      validation: (Rule: any) => Rule.required().error('A descrição é obrigatória')
+      validation: (Rule: any) => [
+        Rule.required().error('A descrição é obrigatória'),
+        Rule.min(50).warning('A descrição ideal deve conter no mínimo 50 caracteres'),
+        Rule.max(160).warning('A descrição ideal deve conter no máximo 160 caracteres')
+      ]
     },
     {
       name: 'date',
