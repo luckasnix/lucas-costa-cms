@@ -22,7 +22,12 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        slugify: (input: string) => input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')
+        slugify: (input: string) => input
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[@#$%&*,.:;!?'"|(){}<>]/g, '')
+          .replace(/\s+/g, '-')
       }
     },
     {
